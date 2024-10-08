@@ -10,7 +10,7 @@ let crash = false;
 // Simulate a longer init duration
 await delay(3000);
 console.log('init done');
-export async function hello(event) {
+export const handler = async (event) => {
   if (event.queryStringParameters && event.queryStringParameters.crash) {
     crash = true;
     // simulate timeout
